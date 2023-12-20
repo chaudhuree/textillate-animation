@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+h5{
+  font-size: 19px;
+  font-weight: 500;
+  position: relative;
+}
+h5::before{
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: springgreen;
+  left: -6%;
+  top: 20%;
+}
+h1{
+  font-size: 49px;
+  width: 70%;
+  text-align: center;
+  font-weight: 100;
+  margin: 26px 0;
+  position: relative;
+}
+h1::after{
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 200px;
+  bottom: -6%;
+  left: 27%;
+  background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+}
+#about-us{
+  display: flex;
+  align-items: center;
+
+}
+#about-us>h4{
+  font-size: 28px;
+  font-weight: 500;
+}
+
+#greendiv{
+  height: 40px;
+  width: 80px;
+  border-radius: 50px;
+  margin-left: 20px;
+  border:1px solid #fff;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+#greendiv img{
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  z-index: 2;
+}
+#greendiv::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: springgreen;
+  left: -100%;
+  transition: left 0.3s ease-in;
+}
+
+#greendiv:hover::after{
+  left: 0;
+}
